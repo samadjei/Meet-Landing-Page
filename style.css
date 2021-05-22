@@ -1,0 +1,456 @@
+:root {
+	--teal: #4d96a9;
+	--darkPurple: #855fb1;
+	--darkBlue: #28283d;
+	--grey: #87879d;
+	--lightBlue: #8fe3f9;
+	--lightPurple: #d9b8ff;
+	--white: #fafafa;
+}
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	/* automatically inherit box-sizing from the body element */
+	/* box-sizing: inherit; */
+	box-sizing: border-box;
+}
+
+/* setting the root font-size  */
+html {
+	box-sizing: border-box;
+	/* change to 1px so that we know that 1rem will equal 10px */
+	/* change the 10px to a percentage which will translate to the percentage given by the browser */
+	/* 10/16*100 */
+	/* this method is used when a user decides to adjust the font size on the browser  */
+	font-size: 62.5%;
+}
+
+body {
+	font-family: 'Red Hat Display', sans-serif;
+	background-color: var(--white);
+	color: var(--grey);
+	font-size: 16px;
+}
+
+.container {
+	width: 1440px;
+	max-width: 100%;
+	margin: 0 auto;
+	padding: 0 2rem;
+	overflow: hidden;
+}
+
+img {
+	max-width: 100%;
+}
+
+/* Typography */
+h1,
+h2 {
+	color: var(--darkBlue);
+	font-weight: 900;
+}
+
+h1 {
+	font-size: 6.4rem;
+	line-height: 6.4rem;
+}
+
+h2 {
+	font-size: 4rem;
+	line-height: 4.4rem;
+}
+
+p {
+	color: var(--grey);
+	font-size: 1.8rem;
+}
+
+/* Buttons */
+.btn {
+	color: var(--white);
+	display: inline-block;
+	width: 19.3rem;
+	height: 5.8rem;
+	border-radius: 2.9rem;
+	text-align: center;
+	border: none;
+	outline: none;
+	font-size: 1.6rem;
+	line-height: 2.6rem;
+	font-weight: 900;
+	transition: all 0.3s ease-out;
+}
+
+.btn-text {
+	color: var(--lightBlue);
+}
+
+.btn:hover {
+	cursor: pointer;
+}
+
+.primary {
+	background-color: var(--teal);
+}
+
+.primary:hover {
+	background-color: #71c0d4;
+}
+
+.secondary {
+	background-color: var(--darkPurple);
+}
+
+.secondary:hover {
+	background-color: #b18bdd;
+}
+
+/* Positioning */
+.flex {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.flex-column {
+	flex-direction: column;
+}
+
+.flex-j {
+	justify-content: space-between;
+}
+
+/* Page Dividers */
+.divider {
+	padding-top: 11rem;
+	padding-bottom: 6.4rem;
+}
+
+.line {
+	position: relative;
+}
+.overline {
+	border-radius: 50%;
+	width: 5.6rem;
+	height: 5.6rem;
+	padding: 0.8rem;
+	border: 1px solid rgba(135, 135, 157, 0.25);
+	background-color: var(--white);
+	text-align: center;
+	margin: 0 auto;
+}
+
+.liner {
+	width: 1px;
+	height: 8.4rem;
+	background-color: rgba(135, 135, 157, 0.25);
+	position: absolute;
+	top: -8.4rem;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.number {
+	font-weight: 900;
+	font-size: 1.6rem;
+	line-height: 2.6rem;
+	color: var(--grey);
+}
+
+/* Header */
+.logo {
+	padding-top: 8rem;
+	padding-bottom: 6.1rem;
+}
+
+.header {
+	position: relative;
+	padding-bottom: 5.5rem;
+	overflow: hidden;
+}
+
+.header-container {
+	max-width: 54rem;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.header-title {
+	padding-bottom: 3.4rem;
+	max-width: 44.5rem;
+}
+
+.header-description {
+	padding-bottom: 3.2rem;
+}
+
+.ctas .secondary {
+	width: 13.9rem;
+	height: 5.8rem;
+}
+
+.images {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+	justify-content: center;
+	align-items: center;
+	grid-gap: 3rem;
+}
+
+.image-items {
+	border-radius: 1rem;
+}
+
+/* Uses */
+.uses-top {
+	padding-top: 8rem;
+	padding-bottom: 7.2rem;
+}
+
+.uses-header-small {
+	color: var(--teal);
+	text-transform: uppercase;
+	font-size: 1.6rem;
+	line-height: 2.6rem;
+
+	letter-spacing: 0.4rem;
+	text-transform: uppercase;
+	padding-bottom: 1.6rem;
+}
+
+.uses-header-big {
+	max-width: 44.5rem;
+	font-size: 4rem;
+	line-height: 4.4rem;
+	text-align: center;
+	padding-bottom: 3.2rem;
+}
+
+.uses-description {
+	font-weight: 500;
+	font-size: 1.8rem;
+	line-height: 2.6rem;
+
+	text-align: center;
+}
+
+.uses {
+	max-width: 52rem;
+	margin: 0 auto;
+	text-align: center;
+}
+
+/* Footer */
+.footer-line {
+	padding-top: 7.2rem;
+	margin-bottom: -2.6rem;
+	z-index: 10;
+}
+
+.footer {
+	position: relative;
+	background-image: url('assets/desktop/image-footer.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding-top: 11.6rem;
+	padding-bottom: 10.4rem;
+	z-index: -8;
+}
+
+.footer-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: var(--teal);
+	opacity: 0.9;
+	z-index: -10;
+}
+
+.footer-items {
+	color: var(--white);
+	max-width: 35rem;
+	z-index: 10;
+}
+
+.footer .btn {
+	z-index: 7;
+}
+.footer .btn:hover {
+	cursor: pointer;
+	background-color: red;
+}
+
+.footer-left {
+	font-weight: 900;
+	font-size: 4rem;
+	line-height: 4.4rem;
+}
+
+.footer-center {
+	font-weight: 500;
+	font-size: 1.8rem;
+	line-height: 2.6rem;
+}
+
+@media only screen and (max-width: 76.8rem) {
+	/* Hero */
+	.header {
+		padding-top: 37.5rem;
+	}
+
+	.logo {
+		padding-top: 4.8rem;
+		padding-bottom: 6.4rem;
+	}
+
+	.header::after {
+		content: '';
+		position: absolute;
+		background-image: url('assets/desktop/image-hero-left.png');
+		background-repeat: no-repeat;
+		background-size: cover;
+		width: 39.4rem;
+		height: 30.3rem;
+		left: -3rem;
+		top: 0;
+	}
+
+	.header::before {
+		content: '';
+		position: absolute;
+		background-image: url('assets/desktop/image-hero-right.png');
+		background-repeat: no-repeat;
+		background-size: cover;
+		width: 39.4rem;
+		height: 30.3rem;
+		right: -3rem;
+		top: 0;
+	}
+
+	.images {
+		grid-template-columns: repeat(auto-fit, minmax(16.4rem, 1fr));
+		grid-gap: 1.1rem;
+	}
+
+	/* Uses */
+	.uses {
+		max-width: 57.3rem;
+	}
+
+	.uses-top {
+		padding-top: 6.7rem;
+		padding-bottom: 4.8rem;
+	}
+
+	/* Footer  */
+	.footer {
+		padding-top: 9.2rem;
+		padding-bottom: 6.6rem;
+	}
+	.footer .flex {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.footer-center {
+		padding-top: 3.2rem;
+		padding-bottom: 4rem;
+	}
+}
+
+/* Media Queries */
+@media only screen and (min-width: 76.8rem) {
+	.ctas .primary {
+		margin-right: 1.6rem;
+	}
+	.header::after {
+		content: '';
+		position: absolute;
+		background-image: url('assets/desktop/image-hero-left.png');
+		background-repeat: no-repeat;
+		background-size: cover;
+		width: 39.4rem;
+		height: 30.3rem;
+		left: -3rem;
+		top: 0;
+	}
+
+	.header::before {
+		content: '';
+		position: absolute;
+		background-image: url('assets/desktop/image-hero-right.png');
+		background-repeat: no-repeat;
+		background-size: cover;
+		width: 39.4rem;
+		height: 30.3rem;
+		right: -3rem;
+		bottom: 0;
+	}
+}
+@media only screen and (max-width: 37.5rem) {
+	/* Header */
+
+	h1 {
+		font-size: 4rem;
+		line-height: 4.4rem;
+	}
+
+	.logo {
+		padding-bottom: 5.4rem;
+		padding-top: 4.8rem;
+	}
+	.header {
+		/* padding-top: 43.36rem; */
+		padding-top: 20rem;
+	}
+	.header::after {
+		width: 19.9rem;
+		height: 15.3rem;
+		left: -2rem;
+	}
+
+	.header::before {
+		width: 19.9rem;
+		height: 15.3rem;
+		right: -2rem;
+	}
+
+	.ctas {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.ctas .primary {
+		margin-bottom: 1.6rem;
+	}
+
+	.images {
+		grid-template-columns: repeat(auto-fit, minmax(15.1rem, 1fr));
+		grid-gap: 2.5rem;
+	}
+
+	/* Uses */
+	.uses-top {
+		padding-top: 6.4rem;
+		padding-bottom: 6.4rem;
+	}
+
+	.uses-header-big {
+		font-size: 3.2rem;
+		line-height: 3.6rem;
+	}
+
+	/* Footer */
+	.footer-left {
+		font-size: 3.2rem;
+		line-height: 3.6rem;
+	}
+}
